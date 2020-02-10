@@ -16,16 +16,15 @@ import { WebView } from 'react-native-webview';
 import { Ionicons } from '@expo/vector-icons'
 
 // data
-let blackpink = require('../youtubedata/EXO.json')
+let blackpink = require('../youtubedata/GOT7.json')
 
-export default class Section2 extends Component {
+export default class Section5 extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.texttitle}> EXO <Blink text="💙" /></Text>
+        <Text style={styles.texttitle}> GOT7 <Blink text="🧡" /></Text>
         <Blackpink />
       </View>
-
 
     )
   }

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "youtubeApp",
-    "slug": "youtubeApp",
+    "name": "kpop top 10",
+    "slug": "kpop-youtube-app",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -15,7 +15,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -26,8 +26,12 @@
     "ios": {
       "supportsTablet": true
     },
-    "entryPoint": "node_modules/expo/AppEntry.js"
+    "android": {
+      "package": "com.coffeeholic.kpop"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js",
+    "description": ""
   },
-  "displayName": "youtubeApp",
-  "name": "youtubeApp"
+  "displayName": "kpop top 10",
+  "name": "kpop top 10"
 }

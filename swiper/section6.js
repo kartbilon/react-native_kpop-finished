@@ -16,16 +16,15 @@ import { WebView } from 'react-native-webview';
 import { Ionicons } from '@expo/vector-icons'
 
 // data
-let blackpink = require('../youtubedata/EXO.json')
+let blackpink = require('../youtubedata/IKON.json')
 
-export default class Section2 extends Component {
+export default class Section6 extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.texttitle}> EXO <Blink text="💙" /></Text>
+        <Text style={styles.texttitle}> IKON <Blink text="⭐" /></Text>
         <Blackpink />
       </View>
-
 
     )
   }
@@ -97,10 +96,10 @@ class BlackpinkInfo extends Component {
             />
           </Modal>
         </View>
+
         <TouchableOpacity
           onPress={() => { this.setModalVisible(true) }}
         >
-
           <Image
             style={styles.imagestyle}
             source={{ uri: this.props.thumbnail }}

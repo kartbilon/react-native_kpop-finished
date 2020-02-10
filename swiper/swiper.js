@@ -13,6 +13,7 @@ import Swiper from 'react-native-swiper'
 import Layout from '../contants/Layout'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { WebView } from 'react-native-webview';
+import { Ionicons } from '@expo/vector-icons'
 
 let blackpink = require('../youtubedata/BANGTAN.json')
 
@@ -29,9 +30,9 @@ export default class SwiperComponent extends Component {
   render() {
     return (
       <View>
-<Text style ={{color: 'white' ,fontSize : 30 , margin : 20}}>B.T.S<Blink text = "❤️"/></Text>
-      <SwiperView />
-</View>
+        <Text style={{ color: 'white', fontSize: 30, margin: 20 }}>B.T.S <Blink text="❤️" /></Text>
+        <SwiperView />
+      </View>
     )
   }
 }
@@ -73,21 +74,38 @@ class BlackpinkInfo extends Component {
   }
   render() {
     return (
-      <View>
-        <View style >
+      <View >
+        <View >
           <Modal
             animationType='none'
             transparent={false}
             visible={this.state.modalVisible}
+
             onRequestClose={() => {
               Alert.alert('Modal has been closed.');
             }}>
+            <TouchableOpacity onPress={() => {
+              this.setModalVisible(!this.state.modalVisible);
+            }}
+              style={{
+                backgroundColor: "white",
+                marginTop: 20,
+                marginBottom: 20
+              }}
+            >
+              <View style={{ flexDirection: "row", marginTop: 30, marginLeft: 10 }}>
+                <Ionicons name="md-arrow-back" size={32} />
+                <Text style={{ fontSize: 28 }}>   BACK </Text>
+              </View>
+            </TouchableOpacity>
             <WebView
               source={{ uri: this.props.url }}
-              style={{ marginTop: 20 }}
+              scalesPageToFitm={true}
+              startInLoadingState={true}
             />
           </Modal>
         </View>
+
         <TouchableOpacity
           onPress={() => { this.setModalVisible(true) }}
         >
@@ -103,7 +121,7 @@ class BlackpinkInfo extends Component {
     )
   }
 }
- class Blink extends Component {
+class Blink extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -112,12 +130,12 @@ class BlackpinkInfo extends Component {
 
     setInterval(() => (this.setState
       (prevState => (
-        { isShowingText : !prevState.isShowingText })
-        )),1000
+        { isShowingText: !prevState.isShowingText })
+      )), 1000
     )
   }
-  render(){
-    if (!this.state.isShowingText){
+  render() {
+    if (!this.state.isShowingText) {
       return null
     }
     return (

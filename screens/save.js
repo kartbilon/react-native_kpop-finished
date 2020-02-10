@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Image, ToolbarAndroidBase} from 'react-native';
-import { ToolbarAndroid } from 'react-native-gesture-handler';
-import Bookmark from './blackpink.js'
+import {StyleSheet, Text, View } from 'react-native';
+import Layout from '../contants/Layout'
 
 
 export default class Nael extends Component {
@@ -11,14 +10,8 @@ export default class Nael extends Component {
   render(){
     return(
     <View>
-      <Text > 
-      key : {this.props.key} 
-      </Text>
-      <Text>
-      title : {this.props.id}
-      </Text>
-      <Text>
-      title : {this.props.hi}
+      <Text style = {{ fontSize : 20, alignSelf : "center", marginTop : Layout.height / 3}}>
+      Sorry, It will be updated next time.
       </Text>
     </View>
     )
